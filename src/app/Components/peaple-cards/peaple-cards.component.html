@@ -1,0 +1,57 @@
+<div class="container px-4 px-lg-5">
+  <div class="container mt-5">
+    <div class="row align-items-center">
+      <!-- Left: Vacation Requests -->
+      <div class="col-md-6">
+        <h2><i class="bi bi-journal-check text-success h1 mt-1"></i> Vacation Requests</h2>
+      </div>
+
+      <!-- Right: Search bar with icon -->
+      <div class="col-md-6 text-end">
+        <div class="input-group d-flex justify-content-end">
+          <span class="input-group-text bg-white">
+            <i class="bi bi-search text-success h4 mt-1"></i>
+          </span>
+          <input type="text" class="nonLeft rightsearch" placeholder="Search..." [(ngModel)]="searchTerm">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <div class="col-md-4" *ngFor="let card of filteredCards">
+      <div class="card shadow-sm">
+        <div class="row">
+          <div class="col-2">
+            <img class="img-fluid rounded-circle" [src]="card.image" alt="">
+          </div>
+          <div class="col">
+            <div class="mt-3 ms-4 fw-bold" [innerHTML]="card.name | highlight: searchTerm"></div>
+          </div>
+          <div class="col-2">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox">
+            </div>
+          </div>
+        </div>
+        <div class="row h-100">
+          <div class="col-8 ms-3">
+            <div class="mt-3">
+              <p class="text-muted small">Submitted on:</p>
+              <p>{{ card.submittedOn }}</p>
+              <p class="text-muted small">Duration:</p>
+              <p>{{ card.duration }}</p>
+              <p class="text-muted small">Salary: {{ card.salary }}</p>
+            </div>
+          </div>
+          <div class="col-3 text-center mt-5">
+            <button class="btn btn-success w-150">Approve</button>
+            <button class="btn btn-outline-success w-200">Decline</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

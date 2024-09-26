@@ -1,0 +1,50 @@
+.card {
+  border-top: none;
+  height: 250px;
+  width: 100%;
+  margin-bottom: 20px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.img-fluid {
+  width: 90px;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.text-muted {
+  color: #6c757d;
+}
+
+button {
+  margin-top: 25px;
+}
+.input-group {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+
+}
+
+.input-group-text {
+    background-color: white;
+    border: 1px solid #ced4da;
+    padding: 0.5rem;
+    border-radius: 35px;
+}
+.rightsearch {
+   border: 1px solid #ced4da;
+   border-left: none;
+   border-radius: 35px;
+
+}
+.highlight {
+    background-color: yellow; /* Change this color as needed */
+  }
+  

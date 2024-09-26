@@ -1,0 +1,16 @@
+.myNavBar {
+    background-color: #247e3d; /* Sets the background color of the navbar */
+}
+
+.nav-link {
+    color: white; /* Sets the text color of the navbar links to white */
+}
+
+
+.mg-r {
+    margin-right: 2.5em; /* Adds right margin to elements in the navbar */
+}
+
+.w {
+    color: white; /* Ensures buttons or links in the navbar have white text */
+}
